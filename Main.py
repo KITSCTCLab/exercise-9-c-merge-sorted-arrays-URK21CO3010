@@ -2,26 +2,26 @@ from typing import List
 
 def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
   # Write code here
-    array2 = [0 for i in range(m + n)]
+    array = [0 for i in range(m + n)]
     i = 0
     j = 0
     k = 0
-    while i <= m and j <= n:
-        if array[i] <= array[j]:
-            array2[k] = array[i]
+    while i < m and j < n:
+        if nums1[i] <= nums2[j]:
+            array[k] = nums1[i]
             i += 1
         else:
-            array2[k] = array[j]
+            array[k] = nums2[j]
             j += 1
         k += 1
-    if i > m:
-        while j <= n:
-            array2[k] = array[j]
+    if i >= m:
+        while j < n:
+            array[k] = nums2[j]
             j += 1
             k += 1
     else:
-        while i <= m:
-            array2[k] = array[i]
+        while i < m:
+            array[k] = nums1[i]
             i += 1
             k += 1
 
