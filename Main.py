@@ -2,7 +2,7 @@ from typing import List
 
 def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
   # Write code here
-  array2 = [0 for i in range(m + n)]
+    array2 = [0 for i in range(m + n)]
     i = 0
     j = 0
     k = 0
