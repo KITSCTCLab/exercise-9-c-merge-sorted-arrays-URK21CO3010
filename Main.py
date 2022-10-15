@@ -24,6 +24,8 @@ def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
             array[k] = nums1[i]
             i += 1
             k += 1
+    for i in range(len(array)):
+      nums1[i] = array[i]
 
 
 # Do not change the following code
