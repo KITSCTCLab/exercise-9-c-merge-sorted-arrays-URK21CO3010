@@ -24,7 +24,7 @@ def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
   
   while j <= n:
     array[k] = nums2[j]
-    2 += 1
+    j += 1
     k += 1
   
   nums1 = array
