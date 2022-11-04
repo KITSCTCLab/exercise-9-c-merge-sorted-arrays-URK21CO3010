@@ -8,7 +8,7 @@ def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
   j = 0
   k = 0
   
-  while i <= m and j <= n:
+  while i < m and j < n:
     if nums1[i] < nums2[j]:
       array[k] = nums1[i]
       i += 1
@@ -17,17 +17,18 @@ def merge(nums1: List[int], m: int, nums2: List[int], n: int) -> None:
       j += 1
     k += 1
   
-  while i <= m:
+  while i < m:
     array[k] = nums1[i]
     i += 1
     k += 1
   
-  while j <= n:
+  while j < n:
     array[k] = nums2[j]
     j += 1
     k += 1
   
-  nums1 = array
+  for i in range(m + n):
+    nums[i] = array[i]
 
 
 # Do not change the following code
